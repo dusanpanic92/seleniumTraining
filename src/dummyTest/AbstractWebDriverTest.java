@@ -26,7 +26,7 @@ public class AbstractWebDriverTest {
 	@After
 	public void shutDown() {
 		System.out.println("after in abstract");
-		driver.close();
+		driver.quit();
 	}
 
 }
