@@ -16,7 +16,9 @@ public class AbstractWebDriverTest {
 
 	@Before
 	public void setUp() {
+		System.out.println("before in abstract");
 		System.setProperty("webdriver.gecko.driver", "driver/geckodriver.exe");
+		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
 		driver = new FirefoxDriver();
 		
 		property = new PropertyManager();
